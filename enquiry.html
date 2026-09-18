@@ -1,132 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enquiry - Wheels of Wonder</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Vehicle Enquiry</title>
+
+    <link rel="stylesheet"
+          href="../Wheels_of_Wonder_Part1_Only/css/styles.css">
 </head>
+
 <body>
 
-    <!-- ===== HEADER ===== -->
-    <header>
-        <img src="images/logo.png" alt="Wheels of Wonder logo">
-        <h1>Wheels of Wonder</h1>
-        <p>Mobile Library</p>
-        
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Our Services</a></li>
-        <li><a href="enquiry.html">Enquiry</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+    <!-- Website Navigation -->
 
-    </header>
+    <nav class="navigation">
 
-    <!-- ===== MAIN CONTENT ===== -->
+        <div class="brand">
+            <img src="images/logo.png"
+                 alt="Wheels of Wonder logo">
+
+            <span>Wheels of Wonder</span>
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="about.html">About</a>
+            </li>
+
+            <li>
+                <a href="services.html">Services</a>
+            </li>
+
+            <li>
+                <a href="enquiry.html">Enquiry</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- Main Content -->
+
     <main>
 
-        <!-- ===== PAGE INTRODUCTION ===== -->
-        <section>
-            <h2>Enquiry</h2>
-            <p>Get involved with Wheels of Wonder or request a visit from the mobile library.</p>
-        </section>
+        <div class="enquiry-wrapper">
 
-        <!-- ===== VOLUNTEER REGISTRATION ===== -->
-        <section>
-            <h2>Volunteer Registration</h2>
-            <p>Volunteers aged 18 and above can support reading programmes and bus operations.</p>
+            <article class="enquiry-introduction">
 
-            <form action="#" method="post">
-                <p>
-                    <label for="vol-name">Full Name</label>
-                    <input id="vol-name" name="full_name" type="text">
-                </p>
+                <h1>Let's Find Your Next Car</h1>
 
                 <p>
-                    <label for="vol-email">Email Address</label>
-                    <input id="vol-email" name="email" type="email">
+                    Tell us what vehicle you are interested in
+                    and our team will help you with your enquiry.
                 </p>
 
-                <p>
-                    <label for="vol-phone">Phone Number</label>
-                    <input id="vol-phone" name="phone" type="tel">
-                </p>
+                <img src="images/logo.png"
+                     alt="Wheels of Wonder">
 
-                <p>
-                    <label for="vol-availability">Availability</label>
-                    <select id="vol-availability" name="availability">
-                        <option value="">Select an option</option>
-                        <option>Weekdays</option>
-                        <option>Weekends</option>
-                        <option>Both weekdays and weekends</option>
-                    </select>
-                </p>
+            </article>
 
-                <p>
-                    <label for="vol-skills">Skills or Experience</label>
-                    <textarea id="vol-skills" name="skills" rows="5"></textarea>
-                </p>
 
-                <p>
-                    <input type="submit" value="Submit Volunteer Application">
-                </p>
-            </form>
-        </section>
+            <!-- Form -->
 
-        <!-- ===== SCHOOL VISIT REQUEST ===== -->
-        <section>
-            <h2>School Visit Request</h2>
-            <p>Schools can request a visit from the Wheels of Wonder mobile library.</p>
+            <section class="enquiry-form">
 
-            <form action="#" method="post">
-                <p>
-                    <label for="school-name">School Name</label>
-                    <input id="school-name" name="school_name" type="text">
-                </p>
+                <h2>Customer Details</h2>
 
-                <p>
-                    <label for="contact-person">Contact Person</label>
-                    <input id="contact-person" name="contact_person" type="text">
-                </p>
+                <form id="enquiryForm">
 
-                <p>
-                    <label for="school-email">Email Address</label>
-                    <input id="school-email" name="email" type="email">
-                </p>
+                    <div class="input-box">
 
-                <p>
-                    <label for="school-phone">Phone Number</label>
-                    <input id="school-phone" name="phone" type="tel">
-                </p>
+                        <label for="name">
+                            Full Name
+                        </label>
 
-                <p>
-                    <label for="preferred-date">Preferred Date</label>
-                    <input id="preferred-date" name="preferred_date" type="date">
-                </p>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="John Smith"
+                            required
+                        >
 
-                <p>
-                    <label for="learners">Number of Learners</label>
-                    <input id="learners" name="learners" type="number">
-                </p>
+                    </div>
 
-                <p>
-                    <input type="submit" value="Request a Visit">
-                </p>
-            </form>
+
+                    <div class="input-box">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="john@example.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-box">
+
+                        <label for="phone">
+                            Contact Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="012 345 6789"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-box">
+
+                        <label for="vehicle">
+                            Select Vehicle
+                        </label>
+
+                        <select id="vehicle"
+                                name="vehicle"
+                                required>
+
+                            <option value="">
+                                Choose a vehicle
+                            </option>
+
+                            <option value="BMW X4">
+                                BMW X4
+                            </option>
+
+                            <option value="Mercedes-Benz GLC">
+                                Mercedes-Benz GLC
+                            </option>
+
+                            <option value="Range Rover Velar">
+                                Range Rover Velar
+                            </option>
+
+                            <option value="Mercedes-Benz GLE">
+                                Mercedes-Benz GLE
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-box">
+
+                        <label for="budget">
+                            Estimated Budget
+                        </label>
+
+                        <input
+                            type="number"
+                            id="budget"
+                            name="budget"
+                            placeholder="Enter your budget"
+                        >
+
+                    </div>
+
+
+                    <div class="input-box">
+
+                        <label for="message">
+                            Additional Information
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Tell us what you are looking for..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button type="submit">
+                            Send Enquiry
+                        </button>
+
+                        <button type="reset">
+                            Reset
+                        </button>
+
+                    </div>
+
+
+                    <p id="formMessage"></p>
+
+                </form>
+
+            </section>
+
+        </div>
+
+
+        <!-- Vehicle Table -->
+
+        <section class="vehicle-list">
+
+            <h2>Vehicles You Can Enquire About</h2>
+
+            <table>
+
+                <caption>
+                    Wheels of Wonder Vehicle Selection
+                </caption>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Vehicle</th>
+
+                        <th>Category</th>
+
+                        <th>Fuel</th>
+
+                        <th>Gearbox</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>BMW X4</td>
+
+                        <td>SUV Coupé</td>
+
+                        <td>Diesel</td>
+
+                        <td>Automatic</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Mercedes-Benz GLC</td>
+
+                        <td>Luxury SUV</td>
+
+                        <td>Petrol</td>
+
+                        <td>Automatic</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Range Rover Velar</td>
+
+                        <td>Luxury SUV</td>
+
+                        <td>Petrol</td>
+
+                        <td>Automatic</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Mercedes-Benz GLE</td>
+
+                        <td>Luxury SUV</td>
+
+                        <td>Petrol</td>
+
+                        <td>Automatic</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
         </section>
 
     </main>
 
-    <!-- ===== FOOTER ===== -->
-    
-<footer>
-    <p>&copy; 2026 Wheels of Wonder Mobile Library. All Rights Reserved.</p>
-    <p>Email: info@wheelswonder.org | Phone: (012) 345-6789</p>
-    <p>123 Church Street, Soshanguve Block XX, Pretoria, 0152</p>
-</footer>
+
+    <!-- Footer -->
+
+    <footer class="site-footer">
+
+        <div>
+
+            <h3>Wheels of Wonder</h3>
+
+            <p>
+                Your journey starts with the right vehicle.
+            </p>
+
+        </div>
+
+        <div>
+
+            <p>
+                &copy; 2026 Wheels of Wonder
+            </p>
+
+        </div>
+
+    </footer>
+
+
+   
 
 </body>
+
 </html>
