@@ -1,87 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Wheels of Wonder</title>
+
+    <meta name="description"
+          content="Contact Wheels of Wonder mobile library in Pretoria and view our weekly mobile library schedule.">
+
+    <meta name="keywords"
+          content="Wheels of Wonder contact, Pretoria mobile library, Gauteng library schedule">
+
+    <meta name="author" content="Mpendulo Khuzwayo">
+
+    <title>Wheels of Wonder - Contact</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;600;700&family=Patrick+Hand&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="../Wheels_of_Wonder_Part1_Only/css/styles.css">
 </head>
+
 <body>
 
-    <!-- ===== HEADER ===== -->
-    <header>
-        <img src="images/logo.png" alt="Wheels of Wonder logo">
-        <h1>Wheels of Wonder</h1>
-        <p>Mobile Library</p>
-        
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Our Services</a></li>
-        <li><a href="enquiry.html">Enquiry</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+<header>
 
-    </header>
+    <section class="header-content">
 
-    <!-- ===== MAIN CONTENT ===== -->
-    <main>
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Wheels of Wonder logo">
+            <h1>Wheels of Wonder</h1>
+        </a>
 
-        <!-- ===== PAGE INTRODUCTION ===== -->
-        <section>
-            <h2>Contact Us</h2>
-            <p>Find our main office or get in touch with the Wheels of Wonder team.</p>
-        </section>
+        <button class="menu-button"
+                onclick="toggleMenu()"
+                aria-label="Open navigation menu">
+            ☰
+        </button>
 
-        <!-- ===== MAIN OFFICE ===== -->
-        <section>
+        <nav id="main-navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+
+    </section>
+
+</header>
+
+<main>
+
+    <section class="page-heading">
+        <h2>Contact Us</h2>
+
+        <p>
+            Get in touch with Wheels of Wonder.
+        </p>
+    </section>
+
+    <!-- Main Office -->
+    <section class="contact-information">
+
+        <article>
             <h2>Main Office</h2>
-            <p>123 Church Street, Soshanguve Block XX, Pretoria, 0152</p>
-            <p>Phone: (012) 345-6789</p>
-            <p>Email: info@wheelswonder.org</p>
-        </section>
 
-        <!-- ===== BUS DEPOT ===== -->
-        <section>
+            <p>
+                <strong>Address:</strong><br>
+                123 Church Street,<br>
+                Soshanguve Block XX,<br>
+                Pretoria, 0152
+            </p>
+
+            <p>
+                <strong>Phone:</strong>
+                (012) 345-6789
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                info@wheelswonder.org
+            </p>
+        </article>
+
+        <!-- Bus Depot -->
+        <article>
             <h2>Bus Depot</h2>
-            <p>456 Park Avenue, Pretoria North, Pretoria, 0116</p>
-            <p>Phone: (012) 987-6543</p>
-            <p>Email: depot@wheelswonder.org</p>
-        </section>
 
-        <!-- ===== OPERATING HOURS ===== -->
-        <section>
-            <h2>Operating Hours</h2>
-            <ul>
-                <li>Monday to Friday: 8am - 5pm</li>
-                <li>Saturday: 9am - 1pm</li>
-                <li>Sunday: Closed</li>
-            </ul>
-        </section>
+            <p>
+                <strong>Address:</strong><br>
+                456 Park Avenue,<br>
+                Pretoria North,<br>
+                Pretoria, 0116
+            </p>
 
-        <!-- ===== WEEKLY BUS SCHEDULE ===== -->
-        <section>
-            <h2>Weekly Bus Schedule</h2>
-            <ul>
-                <li>Monday: Soshanguve Community Centre (9am - 12pm), Extension 12 Park (1pm - 4pm)</li>
-                <li>Tuesday: Mabopane Old Library Building (9am - 12pm), Unit D Primary School (1pm - 3:30pm)</li>
-                <li>Wednesday: City Hall Parking (9am - 12pm), West Park Community Centre (1pm - 4pm)</li>
-                <li>Thursday: Atteridgeville Sports Ground (9am - 12pm), Buhle Primary School (1pm - 3:30pm)</li>
-                <li>Friday: Mamelodi Library Lawn (9am - 12pm), East Park Community Hall (1pm - 4pm)</li>
-                <li>Saturday: Special events at rotating locations (10am - 1pm)</li>
-            </ul>
-        </section>
+            <p>
+                <strong>Phone:</strong>
+                (012) 987-6543
+            </p>
 
-    </main>
+            <p>
+                <strong>Email:</strong>
+                depot@wheelswonder.org
+            </p>
+        </article>
 
-    <!-- ===== FOOTER ===== -->
-    
+    </section>
+
+    <!-- Operating Hours -->
+    <section class="content-section">
+
+        <h2>Operating Hours</h2>
+
+        <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+        <p>Saturday: 9:00 AM - 1:00 PM</p>
+        <p>Sunday: Closed</p>
+
+    </section>
+
+    <!-- Interactive Schedule -->
+    <section class="interactive-schedule">
+
+        <h2>Weekly Bus Schedule</h2>
+
+        <label for="day-selector">Choose a day:</label>
+
+        <select id="day-selector" onchange="showSchedule()">
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+            <option value="saturday">Saturday</option>
+        </select>
+
+        <article id="schedule-display">
+            <h3>Monday</h3>
+            <p>Soshanguve Community Centre: 9:00 - 12:00</p>
+            <p>Extension 12 Park: 1:00 - 4:00</p>
+        </article>
+
+    </section>
+
+    <!-- Google Map -->
+    <section class="map-section">
+
+        <h2>Find Us</h2>
+
+        <iframe
+            src="https://www.google.com/maps?q=Soshanguve,Pretoria,South Africa&output=embed"
+            width="100%"
+            height="400"
+            loading="lazy"
+            title="Google Map showing Wheels of Wonder main office location">
+        </iframe>
+
+    </section>
+
+</main>
+
 <footer>
-    <p>&copy; 2026 Wheels of Wonder Mobile Library. All Rights Reserved.</p>
-    <p>Email: info@wheelswonder.org | Phone: (012) 345-6789</p>
-    <p>123 Church Street, Soshanguve Block XX, Pretoria, 0152</p>
+
+    <div>
+        <h2>Wheels of Wonder</h2>
+        <p>Bringing stories to every child.</p>
+    </div>
+
+    <div>
+        <h3>Contact Us</h3>
+        <p>Phone: (012) 345-6789</p>
+        <p>Email: info@wheelswonder.org</p>
+    </div>
+
+    <p class="copyright">
+        &copy; 2026 Wheels of Wonder. All Rights Reserved.
+    </p>
+
 </footer>
+
+
 
 </body>
 </html>
